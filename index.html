@@ -37,6 +37,55 @@ header .brand img {
     gap: 10px;
   }
 } 
+
+/* AuriHome - Department Cards */
+#departments .cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+#departments .card {
+  border: 1px solid #e4ebe8;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(16, 23, 25, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#departments .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(16, 23, 25, 0.12);
+}
+
+#departments .card .art {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a2c29, #304943);
+  color: #a6c8b9;
+  font-size: 42px;
+}
+
+#departments .card .details {
+  padding: 24px;
+}
+
+@media (max-width: 800px) {
+  #departments .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  #departments .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
 </head>
 <body>
